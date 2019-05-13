@@ -1,11 +1,7 @@
 package com.hoctap.mrhanh.mytest;
-
-import android.annotation.SuppressLint;
-import android.preference.EditTextPreference;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.widget.Toast;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText( this, "Hello Toast", Toast.LENGTH_LONG ).show();
         //Sử dụng đối tượng được khai báo trong xml
         //Bước 1 găn id cho đối tượng trong xml
-        //Bước 2 tạo tên mới và găn lại cho đôi tượng đấy
-        //
-
+        //Bướ
+        EditText editText =findViewById( R.id.edt_number_phone );
+        editText.setText( winUser.getPhoneNumber() );
 
     }
 
