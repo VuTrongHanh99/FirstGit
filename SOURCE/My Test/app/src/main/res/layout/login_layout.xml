@@ -7,15 +7,17 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
         android:layout_marginHorizontal="25dp"
-        android:layout_weight="3"
-        android:src="@mipmap/img_logo" />
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:layout_weight="4"
+        android:src="@drawable/img_logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6"
+        android:layout_weight="8"
         android:orientation="vertical">
 
         <LinearLayout
@@ -31,17 +33,17 @@
                 android:textStyle="bold|italic"
                 android:textSize="30sp" />
 
-            <view
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
-                android:background="#FF5722"></view>
+                android:background="#FF5722"></View>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Xin chào"
             android:textStyle="bold|italic"
-            android:textSize="40sp" />
+            android:textSize="36sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,10 +63,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
             android:gravity="center"
             android:layout_marginHorizontal="10dp"
             android:padding="10dp"
-
+            android:drawableRight="@mipmap/ic_next"
             android:background="@drawable/red_round_bg"
             android:text="Đăng nhập"
             android:textSize="24sp" />
@@ -89,7 +92,9 @@
             <ImageView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/ic_gg" />
+                android:src="@drawable/ic_gg"
+                android:scaleX="0.8"
+                android:scaleY="0.8"/>
         </LinearLayout>
 
     </LinearLayout>
