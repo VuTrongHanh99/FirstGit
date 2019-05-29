@@ -1,6 +1,7 @@
 package com.hoctap.mrhanh.mytest;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     EditText edtPhoneNumber;
+    AppConfig appConfig=new AppConfig();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,18 @@ public class LoginActivity extends AppCompatActivity {
                     // chuyen man hinh
                     // tạo đối tượng intent
                     Intent intent=new Intent( LoginActivity.this,MainActivity.class );
+                    User user=new User();
+                    user.setId(1);
+                    user.setPhoneNumber("+84123456789");
+                    user.setUsername("Vu Trong Hanh01");
+                    user.setProfileUrl("https://photos.google.com/photo/AF1QipOuiDm30QTjDXk98Q7DtrnHCNbedRm5z62Nv2HY");
+
+                    intent.putExtra("user",user);
+                    //luu so dien thoai vao
+                    AppConfig.setPhoneNumber(edtPhoneNumber.getText().toString(),LoginActivity.this);
+
                     startActivity(intent);
+                    finish();
                 }else {
                     // Thoong bao loi
                     Toast.makeText( LoginActivity.this,"Vui long kiem tra lai so dien thoai! Va thu lai", Toast.LENGTH_LONG ).show();
@@ -43,13 +56,10 @@ public class LoginActivity extends AppCompatActivity {
         } );
     }
 
+
     boolean checkValid(){
         int phoneLeng=edtPhoneNumber.getText().toString().length();
-        return (phoneLeng>9);
-
-//        if (phoneLeng>9)
-//            return true;
-//        return false;
+        return (phoneLeng>5);
     }
 
 

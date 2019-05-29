@@ -1,6 +1,8 @@
 package com.hoctap.mrhanh.mytest;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     int id;
     String username;
     String phoneNumber;
